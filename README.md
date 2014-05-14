@@ -1,4 +1,4 @@
-node-spa-simple-todo
+node-spa-partials
 ====================
 
-based on `http://scotch.io/tutorials/javascript/node-and-angular-to-do-app-controllers-and-services`
+based on `http://scotch.io/` tutorial
