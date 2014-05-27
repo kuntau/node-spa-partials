@@ -7,19 +7,18 @@ var kuntauApp = angular.module('kuntauApp', ['ui.router']);
 kuntauApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
   // for any unmatched url, redirect here
-  $urlRouterProvider.otherwise('/');
+  $urlRouterProvider.otherwise('/home');
 
   $stateProvider
 
     // route for the home page
     .state('root', {
       url         : '/home',
-      templateUrl : 'views/home.html',
-      controller  : 'MainCtrl'
+      templateUrl : 'views/home.html'
     })
 
-    .state('root.home', {
-      url         : '/home',
+    .state('root.index', {
+      url         : '/index',
       templateUrl : 'views/home.index.html'
     })
 
@@ -34,7 +33,9 @@ kuntauApp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
       controller  : function ($scope) {
         $scope.names = ["nizam", "hassan", "adam", "burhan"];
       }
-    })
+    });
+
+    $stateProvider
 
     // route for about
     .state('about', {
