@@ -24,6 +24,11 @@ kuntauApp.config(function($routeProvider, $locationProvider) {
       controller  : 'contactController'
     })
 
+    .when('/signin', {
+      templateUrl : 'views/signin.html',
+      controller  : 'signinController'
+    })
+
     .otherwise({ redirectTo: '/home' });
 
     $locationProvider.html5Mode(true);
@@ -44,3 +49,7 @@ kuntauApp.controller('aboutController', function ($scope) {
 kuntauApp.controller('contactController', function ($scope) {
   $scope.message = 'Contact us!!';
 });
+
+kuntauApp.controller('signinController', function ($scope) {
+  $scope.message = 'Please sign in!';
+})
