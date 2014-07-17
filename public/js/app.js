@@ -6,36 +6,35 @@ var kuntauApp = angular.module('kuntauApp', ['ui.router']);
 // configure our routes
 kuntauApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
+  // $locationProvider.html5Mode(true);
   // for any unmatched url, redirect here
-  $urlRouterProvider.otherwise('/home');
+  $urlRouterProvider.otherwise('/home/index');
 
   $stateProvider
 
     // route for the home page
-    .state('root', {
+    .state('home', {
       url         : '/home',
       templateUrl : 'views/home.html'
     })
 
-    .state('root.index', {
-      url         : '/index',
-      templateUrl : 'views/home.index.html'
-    })
+      .state('home.index', {
+        url         : '/index',
+        templateUrl : 'views/home.index.html'
+      })
 
-    .state('root.message1', {
-      url         : '/message1',
-      templateUrl : 'views/home.message1.html'
-    })
+      .state('home.message1', {
+        url         : '/message1',
+        templateUrl : 'views/home.message1.html'
+      })
 
-    .state('root.message2', {
-      url         : '/message2',
-      templateUrl : 'views/home.message2.html',
-      controller  : function ($scope) {
-        $scope.names = ["nizam", "hassan", "adam", "burhan"];
-      }
-    });
-
-    $stateProvider
+      .state('home.message2', {
+        url         : '/message2',
+        templateUrl : 'views/home.message2.html',
+        controller  : function ($scope) {
+          $scope.names = ["nizam", "hassan", "adam", "burhan"];
+        }
+      })
 
     // route for about
     .state('about', {
@@ -55,8 +54,6 @@ kuntauApp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
       templateUrl : 'views/login.html',
       controller  : 'LoginCtrl'
     });
-
-    $locationProvider.html5Mode(true);
 
 });
 
