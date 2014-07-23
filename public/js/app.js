@@ -6,7 +6,7 @@ var kuntauApp = angular.module('kuntauApp', ['ui.router']);
 // configure our routes
 kuntauApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
-  // $locationProvider.html5Mode(true);
+  $locationProvider.html5Mode(true);
   // for any unmatched url, redirect here
   $urlRouterProvider.otherwise('/home/index');
 
