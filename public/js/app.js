@@ -6,9 +6,9 @@ var kuntauApp = angular.module('kuntauApp', ['ui.router']);
 // configure our routes
 kuntauApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
 
-  $locationProvider.html5Mode(true);
+  // $locationProvider.html5Mode(true);
   // for any unmatched url, redirect here
-  $urlRouterProvider.otherwise('/home/index');
+  $urlRouterProvider.otherwise('/home');
 
   $stateProvider
 
@@ -52,7 +52,10 @@ kuntauApp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
     .state('login', {
       url         : '/login',
       templateUrl : 'views/login.html',
-      controller  : 'LoginCtrl'
+      // controller  : 'LoginCtrl'
+      controller  : function ($scope) {
+        $('#papsbLogin').modal('toggle');
+      }
     });
 
 });

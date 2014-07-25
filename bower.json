@@ -19,7 +19,7 @@
     "angular": "^1.x",
     "bootstrap": "^3.x",
     "font-awesome": "^4.x",
-    "angular-ui": "^0.4.x",
-    "angular-ui-router": "^0.x"
+    "angular-ui-router": "^0.x",
+    "angular-ui-bootstrap-bower": "~0.11.0"
   }
 }
