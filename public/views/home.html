@@ -1,18 +1,32 @@
-﻿<!-- about.html -->
+﻿<!-- home.html -->
 
-<div class="col-xs-3 col-lg-2">
-  <ul class="unstyled">
-    <li><a ui-sref=".message1">Message 1</a></li>
-    <li><a ui-sref=".message2">Message 2</a></li>
-  </ul>
+<div id="sidebar-wrapper" class="sidebar">
+  <div class="sidebar-nav">
+    <ul class="unstyled">
+      <li><a ui-sref=".message1" class="green">Message 1</a></li>
+      <li><a ui-sref=".message2">Message 2</a></li>
+      <li><a ui-sref=".message2">Message 2</a></li>
+      <li><a ui-sref=".message2">Message 2</a></li>
+      <li><a ui-sref=".message2">Message 2</a></li>
+      <li><a ui-sref=".message2">Message 2</a></li>
+      <li><a ui-sref=".message2">Message 2</a></li>
+      <li><a ui-sref=".message2">Message 2</a></li>
+    </ul>
+  </div>
 </div>
-<div class="col-xs-9 col-lg-10">
-  <div class="jumbotron text-center" ui-view>
-    <h1>home page</h1>
-    <p>
-      Ipsum quos lorem quisquam ducimus quod accusantium. Incidunt error veritatis 
-      veniam quam dolore aperiam quidem qui repellat fugiat maiores accusantium. 
-      Officia debitis facere quos laudantium aut accusantium! Distinctio laboriosam esse.
-    </p>
+<div id="content-wrapper">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="jumbotron text-center" ui-view>
+          <h1>home page</h1>
+          <p class="green">
+            Ipsum quos lorem quisquam ducimus quod accusantium. Incidunt error veritatis 
+            veniam quam dolore aperiam quidem qui repellat fugiat maiores accusantium. 
+            Officia debitis facere quos laudantium aut accusantium! Distinctio laboriosam esse.
+          </p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

@@ -10,6 +10,7 @@
 
   <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css" />
   <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
   <style>
     /*html                { overflow-y: scroll; }*/
     /*body                { padding-top: 50px; }*/
@@ -34,20 +35,18 @@
           <li><a ui-sref="home"><i class="fa fa-home"></i> Home</a></li>
           <li><a ui-sref="about"><i class="fa fa-shield"></i> About</a></li>
           <li><a ui-sref="contact"><i class="fa fa-comment"></i> Contact</a></li>
-          <li><a href="" app-login="login"><i class="fa fa-sign-in"></i> Sign In</a></li>
+          <li><a app-login="login"><i class="fa fa-sign-in"></i> Sign In</a></li>
           <!-- <li><a ui&#45;sref="login"><i class="fa fa&#45;sign&#45;in"></i> Sign In</a></li> -->
-          <!--<li><input type="text" placeholder="username"/></li>-->
-          <!--<li><input type="password" placeholder="password"/></li>-->
         </ul>
       </div>
     </nav>
   </header>
 
   <!-- main content and injected views -->
-  <div id="main" class="container">
+  <div id="main" class="wrapper">
 
     <!-- angular templating -->
-    <section class="row" ui-view></section>
+    <section class="main-ui-view" ui-view></section>
 
   </div>
 
@@ -56,7 +55,7 @@
     Find me on <a href="http://kuntau.org">kuntau.org</a>
   </footer>
 
-  <ng-include src="'views/login.html'"></ng-include>
+  <!--<ng-include src="'views/login.html'"></ng-include>-->
 
   <script src="libs/angular/angular.min.js"></script>
   <script src="libs/jquery/dist/jquery.min.js"></script>

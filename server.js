@@ -26,12 +26,15 @@
     // express setup
     app.use(express.static(__dirname + '/public'));
     app.use(logger('dev'));
-    app.use(bodyParser());
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({ extended: true }));
     app.use(methodOverride());
 
     // passport middleware setup
     app.use(cookieParser())
-    app.use(session({ secret: 'papsbportalsecret' }));
+    app.use(session({ secret: 'papsbportalsecret',
+                      resave: true,
+                      saveUninitialized: true }));
     app.use(passport.initialize());
     app.use(passport.session());
     app.use(flash());

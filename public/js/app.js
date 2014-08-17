@@ -85,6 +85,7 @@ kuntauApp.directive('appLogin', function () {
         $('#papsbLogin').modal('toggle');
       })
     }
+    //templateUrl: 'views/login.html'
     // template: 'Login'
   }
 })

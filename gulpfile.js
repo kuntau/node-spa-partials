@@ -1,19 +1,23 @@
 
 var gulp       = require('gulp'),
     livereload = require('gulp-livereload'),
-    supervisor = require('gulp-supervisor');
+    nodemon    = require('gulp-nodemon');
 
 gulp.task('default', function() {
   console.log('from gulp!');
-  supervisor('server.js');
+  nodemon({ script: 'server.js',
+            // ext: 'js',
+            ignore: ['./public/**']});
+  // gulp.run('watch');
   livereload.listen();
   gulp.watch('public/**').on('change', livereload.changed);
     // .on('change', livereload.changed);
-    // .on('restart', function() {
-    //
+    // .on('restart', livereload.changed);
+    //   livereload.changed;
     // });
 });
 
 gulp.task('watch', function() {
+  livereload.listen();
   gulp.watch('public/**').on('change', livereload.changed);
 });
