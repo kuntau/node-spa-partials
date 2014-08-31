@@ -11,17 +11,27 @@
   padding-left: 0;
   background: #333;
   height: 100vh;
+  z-index: 1000;
+}
+
+#sidebar-wrapper.sidebar-toggled {
+  width: 0;
+  /* visibility: hidden; */
 }
 
 #content-wrapper {
   /* margin-left: 250px; */
   /* position: absolute; */
   padding: 0;
-  padding-left: 250px;
+  margin-left: 250px;
   height: 100vh;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
   background: #fff;
+}
+
+#content-wrapper.sidebar-toggled {
+  margin-left: 0;
 }
 
 .blue {
@@ -34,4 +44,8 @@
 
 .nav a {
   cursor: pointer;
+}
+
+a .fa {
+  margin-right: 5px;
 }

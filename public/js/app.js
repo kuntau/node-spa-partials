@@ -1,7 +1,7 @@
 // public/js/app.js
 
 // create the module and name it kuntauApp
-var kuntauApp = angular.module('kuntauApp', ['ui.bootstrap', 'ui.router']);
+var kuntauApp = angular.module('kuntauApp', ['ui.bootstrap', 'ui.router', 'ngAnimate']);
 
 // configure our routes
 kuntauApp.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
@@ -65,6 +65,7 @@ kuntauApp.controller('mainController', function($scope) {
 
   // create a message to display in our view
   $scope.message = 'Everyone come and see how good id look';
+  $scope.sidebar = true;
 });
 
 kuntauApp.controller('aboutController', function ($scope) {
@@ -79,7 +80,7 @@ kuntauApp.directive('appLogin', function () {
   return {
     restrict: 'A',
     link: function(scope, el, attrs) {
-      console.log('directive app-login');
+      // console.log('directive app-login');
       el.bind('mouseup', function () {
         console.log('done');
         $('#papsbLogin').modal('toggle');

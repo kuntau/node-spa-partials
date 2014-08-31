@@ -1,6 +1,6 @@
 ﻿<!-- home.html -->
 
-<div id="sidebar-wrapper" class="sidebar">
+<div id="sidebar-wrapper" class="sidebar" ng-class="sidebar ? 'sidebar-toggled' : '' ">
   <div class="sidebar-nav">
     <ul class="unstyled">
       <li><a ui-sref=".message1" class="green">Message 1</a></li>
@@ -14,11 +14,11 @@
     </ul>
   </div>
 </div>
-<div id="content-wrapper">
+<div id="content-wrapper" ng-class="sidebar ? 'sidebar-toggled' : '' ">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">
-        <div class="jumbotron text-center" ui-view>
+        <div class="jumbotron text-center" ui-view ng-controller="mainController">
           <h1>home page</h1>
           <p class="green">
             Ipsum quos lorem quisquam ducimus quod accusantium. Incidunt error veritatis 
