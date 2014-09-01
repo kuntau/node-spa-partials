@@ -44,10 +44,10 @@
   </header>
 
   <!-- main content and injected views -->
-  <div id="main" class="wrapper">
+  <div id="wrapper" class="wrapper" ng-class="sidebar ? 'sidebar-hidden' : '' ">
 
     <!-- angular templating -->
-    <section class="main-ui-view" ui-view></section>
+    <section class="main-ui-view" ui-view ng-controller="mainController"></section>
 
   </div>
 

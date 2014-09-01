@@ -61,12 +61,12 @@ kuntauApp.config(function($stateProvider, $urlRouterProvider, $locationProvider)
 });
 
 // create the controller and inject Angular's $scope
-kuntauApp.controller('mainController', function($scope) {
+kuntauApp.controller('mainController', ['$scope', function($scope) {
 
   // create a message to display in our view
   $scope.message = 'Everyone come and see how good id look';
   $scope.sidebar = true;
-});
+}]);
 
 kuntauApp.controller('aboutController', function ($scope) {
   $scope.message = 'This is about page!';

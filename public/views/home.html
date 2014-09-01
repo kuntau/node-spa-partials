@@ -1,24 +1,23 @@
 ﻿<!-- home.html -->
 
-<div id="sidebar-wrapper" class="sidebar" ng-class="sidebar ? 'sidebar-toggled' : '' ">
-  <div class="sidebar-nav">
-    <ul class="unstyled">
+<div id="sidebar-wrapper">
+    <ul class="unstyled sidebar-nav">
       <li><a ui-sref=".message1" class="green">Message 1</a></li>
       <li><a ui-sref=".message2">Message 2</a></li>
+      <li><a ui-sref=".message2" class="blue">Message 2</a></li>
       <li><a ui-sref=".message2">Message 2</a></li>
+      <li><a ui-sref=".message1" class="green">Message 1</a></li>
       <li><a ui-sref=".message2">Message 2</a></li>
-      <li><a ui-sref=".message2">Message 2</a></li>
-      <li><a ui-sref=".message2">Message 2</a></li>
-      <li><a ui-sref=".message2">Message 2</a></li>
+      <li><a ui-sref=".message1" class="green">Message 1</a></li>
       <li><a ui-sref=".message2">Message 2</a></li>
     </ul>
-  </div>
 </div>
-<div id="content-wrapper" ng-class="sidebar ? 'sidebar-toggled' : '' ">
+<div id="content-wrapper">
   <div class="container-fluid">
     <div class="row">
       <div class="col-xs-12">
-        <div class="jumbotron text-center" ui-view ng-controller="mainController">
+        <!-- <div class="jumbotron text&#45;center" ui&#45;view ng&#45;controller="mainController"> -->
+        <div ui-view>
           <h1>home page</h1>
           <p class="green">
             Ipsum quos lorem quisquam ducimus quod accusantium. Incidunt error veritatis 
